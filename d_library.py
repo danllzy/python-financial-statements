@@ -1,8 +1,3 @@
-import pandas as pd
-import requests
-import datetime
-import io
-
 def fy_statements(ticker, analysis_period, analysis_end):
     api_key= "(YOUR SIMFIN API KEY)"
     request_url= "https://simfin.com/api/v2/companies/statements"
