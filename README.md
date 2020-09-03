@@ -1,5 +1,5 @@
 # Python-Financial-Statements
-Library written in Python to assist DCF calculations. Processes historical financial statements pulled from SimFin and UniBit APIs. Helps to skip some processing steps **but still requires spreadsheets to accurately formulate pro forma** 
+Library written in Python to assist DCF calculations. Processes historical financial statements pulled from SimFin and UniBit APIs. Helps to skip some processing steps **but still requires spreadsheets to accurately formulate pro forma**.
 
 This is a personal project to brush up on my Python so please feel free to give feedback! I will be adding new functions to automate more parts of the process along the way.
 
