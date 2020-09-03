@@ -4,7 +4,7 @@ import datetime
 import io
 
 def fy_statements(ticker, analysis_period, analysis_end):
-    api_key= "(YOUR SIMFIN API KEY)"
+    api_key= "r3ABWY1zrsEnRaFZPjEuwjbkHjc5IeZj"
     request_url= "https://simfin.com/api/v2/companies/statements"
 
     latest_year= {"l_year": analysis_end}
@@ -118,7 +118,7 @@ def fy_statements(ticker, analysis_period, analysis_end):
     return statement
 
 def fy_income(ticker, analysis_period, analysis_end):
-    api_key= "(YOUR SIMFIN API KEY)"
+    api_key= "r3ABWY1zrsEnRaFZPjEuwjbkHjc5IeZj"
     request_url= "https://simfin.com/api/v2/companies/statements"
 
     latest_year= {"l_year": analysis_end}
@@ -162,7 +162,7 @@ def fy_income(ticker, analysis_period, analysis_end):
 
 
 def fy_bs(ticker, analysis_period, analysis_end):
-    api_key= "(YOUR SIMFIN API KEY)"
+    api_key= "r3ABWY1zrsEnRaFZPjEuwjbkHjc5IeZj"
     request_url= "https://simfin.com/api/v2/companies/statements"
 
     latest_year= {"l_year": analysis_end}
@@ -206,7 +206,7 @@ def fy_bs(ticker, analysis_period, analysis_end):
 
 
 def fy_cf(ticker, analysis_period, analysis_end):
-    api_key= "(YOUR SIMFIN API KEY)"
+    api_key= "r3ABWY1zrsEnRaFZPjEuwjbkHjc5IeZj"
     request_url= "https://simfin.com/api/v2/companies/statements"
 
     latest_year= {"l_year": analysis_end}
@@ -351,7 +351,7 @@ def asset_turnover(fy_statements):
     return avg_turnover
 
 def shares_outstanding(ticker):
-    api_key= "(YOUR SIMFIN API KEY)"
+    api_key= "r3ABWY1zrsEnRaFZPjEuwjbkHjc5IeZj"
     request_url= "https://simfin.com/api/v2/companies/shares"
 
     date= datetime.datetime.now()
@@ -378,7 +378,7 @@ def interest_expense(ticker, fy_statements):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "IS", "startDate": start_date, "endDate": end_date, "selectedFields": "interest_expense,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -398,7 +398,7 @@ def gross_ppe(ticker, fy_statements):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "BS", "startDate": start_date, "endDate": end_date, "selectedFields": "gross_ppe,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -418,7 +418,7 @@ def accumulated_dep(ticker, fy_statements):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "BS", "startDate": start_date, "endDate": end_date, "selectedFields": "gross_ppe,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -449,7 +449,7 @@ def cs_ad(ticker, fy_statements):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "BS", "startDate": start_date, "endDate": end_date, "selectedFields": "gross_ppe,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -495,7 +495,7 @@ def weighted_avg_dep(ticker, fy_statements, fy_income):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "BS", "startDate": start_date, "endDate": end_date, "selectedFields": "gross_ppe,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -565,7 +565,7 @@ def weighted_avg_ir(ticker, fy_statements):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     parameters= {"tickers": ticker, "interval": "A", "statement": "IS", "startDate": start_date, "endDate": end_date, "selectedFields": "interest_expense,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -621,7 +621,7 @@ def avg_assumptions(ticker, fy_statements, fy_income):
     request_url = "https://api.unibit.ai/v2/company/coreFinancials/?"
     start_date= str(fy_statements.columns[-1])+"-01-01"
     end_date= str(fy_statements.columns[0])+"-12-31"
-    unibit_key= "(YOUR UNIBIT API KEY)"
+    unibit_key= "ON_gMEuBgbWuSElGbGhNvoNXibBcZd8A"
     
     #avg_ir:
     parameters= {"tickers": ticker, "interval": "A", "statement": "IS", "startDate": start_date, "endDate": end_date, "selectedFields": "interest_expense,report_date", "dataType": "csv", "accessKey": unibit_key}
@@ -671,7 +671,7 @@ def avg_assumptions(ticker, fy_statements, fy_income):
         avg_ir= pd.DataFrame(avg_ir)
         avg_ir= pd.concat([avg_ir, hist_ir], axis=1)
 
-    
+    #avg_dep:
     parameters= {"tickers": ticker, "interval": "A", "statement": "BS", "startDate": start_date, "endDate": end_date, "selectedFields": "gross_ppe,report_date", "dataType": "csv", "accessKey": unibit_key}
 
     request = requests.get(request_url, parameters)
@@ -733,7 +733,7 @@ def avg_assumptions(ticker, fy_statements, fy_income):
         avg_dep= pd.concat([avg_dep, hist_dep], axis=1)
         avg_dep= avg_dep.rename(index= {"Depreciation & Amortization": "Weighted Depreciation Rate"})
         
-    
+    #avg_turnover
     hist_ta= fy_statements.loc["Total Assets"]
     calc_years= fy_statements.drop(fy_statements.columns[-1], axis=1)
     
@@ -762,16 +762,16 @@ def avg_assumptions(ticker, fy_statements, fy_income):
         avg_turnover= pd.concat([avg_turnover, hist_turnover], axis=1)
         avg_turnover= avg_turnover.rename(index={0: "Asset Turnover Rate"})
         
-   
+    #avg_rev_growth:
     growth= fy_statements.loc["Revenue"].pct_change(-1).dropna()
-    
+    #reverse pct_change direction
     mean= growth.mean()
     growth= pd.DataFrame(growth).T
     
     growth.insert(0, "Avg", mean)
     avg_growth= growth.rename(index={"Revenue": "Revenue Growth Rate"})
     
-    
+    #collating averages:
     avg_assumptions= avg_growth["Avg"].append([avg_turnover["Avg"], avg_ir["Avg"], avg_dep["Avg"]])
     avg_assumptions= pd.DataFrame(avg_assumptions)
     
